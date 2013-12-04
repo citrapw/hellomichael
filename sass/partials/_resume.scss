@@ -1,0 +1,56 @@
+.resume {
+	.content {
+		h3 {
+			margin-top: 2px;
+		}
+
+		h4 {
+			line-height: 28px;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	
+	section {
+		margin-bottom: 30px;
+		padding-bottom: 20px;
+	}
+
+	.border {
+		padding-bottom: 25px;
+		border-bottom: 1px solid #DDD;
+	}
+
+	.position {
+		margin-bottom: 30px;
+
+ 		.subtitle {
+ 			display: inline-block;
+ 			margin-left: 20px;
+		}
+	}
+
+	.working-knowledge {
+		> * {
+			padding-left: 17px;
+		}
+	}
+
+	.technical, .awards {
+		h4 {
+			margin-bottom: 10px;
+		}
+
+		ul {
+			li {
+				margin: 0 0 3px 17px;
+				margin-bottom: 2px;
+				font-size: 12px;
+				list-style-type: disc;
+			}
+		}
+	}
+}

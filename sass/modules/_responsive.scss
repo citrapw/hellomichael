@@ -1,0 +1,394 @@
+/**************************
+Responsive Breaks
+***************************/
+@media only screen and (min-width: 1750px) {
+	.feature {
+		img {
+			position: relative;
+			left: 0;
+			margin-left: 0;
+			height: auto;
+			width: 100%;
+		}
+	}
+}
+
+@media #{$desktop}, #{$laptop} {
+	.casestudy {
+		.gallery-nav {
+			li {
+				&.current {
+					a {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media #{$laptop} {
+	.content {
+		section {
+			&.showcase {
+				background: url(../img/foodsters/showcase_bg.jpg) no-repeat 50% 15%
+			}
+		}
+	}
+
+	.resume {
+		.position {
+	 		.subtitle {
+	 			display: block;
+	 			margin-left: 0;
+			}
+		}
+	}
+
+}
+
+@media #{$laptop}, #{$tablet} {
+	.projects {
+		.project {
+			img {
+				height: 170px;
+			}
+
+			a {
+				.background {			
+					@include transform(translate(834px));
+				}
+
+				.description {
+					padding: 22px 20px 0;
+				}
+			}
+
+			&.one-third {
+				.background {	
+					@include transform(translate(515px));
+				}
+
+				.description {
+					padding: 13px 10px 0;
+				}
+			}
+
+			&.bhm, &.foodsters {
+				&.one-third {
+					img {
+						margin-left: -336px;
+					}
+				}
+			}
+		}
+	}	
+
+	.casestudy {
+		section {
+			&.brief {
+				.logo {
+					> div {
+						width: auto;
+
+						.ribbon {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		.timeline {
+			.event {
+				&.alpha {
+					&.visible {
+						left: 0;
+
+						@include opacity(1);
+
+						.dot {
+							right: -62px;
+						}
+					}
+				}
+
+				&.omega {
+					&.visible {
+						left: 0;
+						@include opacity(1);
+
+						.dot {
+							left: -61px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.foodsters {
+		.knoll {
+			left: -95px;
+		}
+	}
+
+	.bigheadmode {
+		section {
+	 		&.papercraft {
+	 			.animation {
+	 				margin-left: -45px;
+	 			}
+	 		}
+	 	}
+	}
+}
+
+@media #{$tablet}, #{$mobile} {
+	.feature {
+		img {
+			position: relative;
+		}
+	}
+
+	header {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		left: 0;
+		height: auto;
+		width: 100%;
+		background: none;
+		border: none;
+
+		nav {
+			margin-top: 0;
+
+			ul {
+				@include box-shadow(inset 0 -1px 0 0 #DDD);
+				@include single-transition(max-height, 0.5s);
+
+				position: relative;
+				max-height: 450px;
+				margin: 0;
+				background-color: $white;
+				border: none;
+				overflow: hidden;
+				z-index: 0;
+
+				li {
+					margin-bottom: 40px;
+
+					&:first-child {
+						margin-top: 40px;
+					}
+				}
+
+				&.collapsed {
+					max-height: 0;
+				}
+			}
+
+			.contact {
+				padding-bottom: 0;
+			}
+		}
+
+		.navbar {
+			position: relative;
+			display: block;
+			text-align: right;
+			background-color: #c33;
+			z-index: 1;
+
+			button {
+				@include border-radius(0);
+				margin: 12px 10px 10px;
+				padding: 0;
+				background: none;
+				border: none;
+
+				&:hover, &:focus {
+					background: none;
+					outline: none;
+				}
+
+				.icon-bar {
+					display: block;
+					width: 22px;
+					height: 3px;
+					margin-top: 4px;
+					background-color: $white;
+
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+		.copyright, .progress-bar {
+			display: none;
+		}
+	}
+
+	#main {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.casestudy {
+		section {
+			&.brief {
+				h2.heading {
+					margin-bottom: 0;
+				}
+
+				.logo {
+					margin-bottom: 40px;
+					padding-bottom: 30px;
+				}
+			}
+		}
+	}
+
+	.foodsters {
+		section {
+			&.research {
+				figure {
+					margin-bottom: 30px;
+				}
+			}
+
+			&.showcase {
+				background: none;
+			}
+		}
+	}
+
+	.resume {
+		.position {
+	 		.subtitle {
+	 			display: block;
+	 			margin-left: 0;
+			}
+		}
+
+		.content {
+			h3 {
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.modal {
+		$vimeo_height: 750px;
+		$vimeo_width: 422px;
+
+		.video-wrapper {
+			margin-left: #{(-$vimeo_height)/2};
+			margin-top: #{-($vimeo_width/2) - 45px};
+		}
+	}
+}
+
+@media #{$mobile} {
+	.projects {
+		.project, .project a {
+			height: 104px;
+			overflow: hidden;
+		}
+
+		.project {
+			a {
+				.info {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.modal {
+		display: none;
+	}
+	
+	.home {
+		#about {
+			.heading {
+				.subtitle {
+					display: none;
+
+					&.byline {
+						padding: 0 10px;
+						display: block;
+
+						&:after {
+							content: ". Perfecting the web one pixel at a time";
+						}
+					}
+				}
+			}
+
+			.resume {
+				text-align: center;
+
+				a, a:first-child {
+					display: inline-block;
+				}
+			}
+		}
+
+		.leftHand, .rightHand, .feature, footer {
+			display: none;
+		}
+	}
+
+	.casestudy {
+		.timeline {
+			h4, .event .dot {
+				display: none;
+			}
+		}
+	}
+	
+	.foodsters {
+		.knoll {
+			left: -285px;
+		}
+	}
+
+	.bigheadmode {
+		section {
+	 		&.papercraft {
+	 			.animation {
+	 				margin-left: -85px;
+	 			}
+	 		}
+	 	}
+	}
+
+	.resume {
+		.working-knowledge {
+			> * {
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+@media #{$mobile_landsdcape} {
+	.projects {
+		.project, .project a {
+			height: 146px;
+			overflow: hidden;
+		}
+	}
+}
+
+@media #{$mobile_portrait} {
+	.home {
+		.leftHand, .rightHand {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+.asr, .bjjstack {
+	section {
+ 		&.review {
+ 			img {
+ 				@extend %img-responsive;
+ 				border: 1px solid #CCC;
+ 			}
+		}	
+	}
+}

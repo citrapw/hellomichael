@@ -1,0 +1,29 @@
+/**************************
+Sprites
+***************************/
+@import "img/sprites/*.png";
+$sprites: sprite-map("img/sprites/*.png", $spacing: 20px);
+
+.sprites {
+/*   .logo    		{@include sprites-sprite(logo);}
+  .email   		{@include sprites-sprite(email);}
+  .facebook   	{@include sprites-sprite(facebook);}
+  .linkedin 		{@include sprites-sprite(linkedin);}
+  .launch    {@include sprites-sprite(launch);}
+  .git    {@include sprites-sprite(git);}
+  //.tools    {@include sprites-sprite(tools);}
+  .play    {@include sprites-sprite(play);}
+  .tools    {@include sprites-sprite(tools);}
+  .computer    {@include sprites-sprite(computer);}
+  .phone    {@include sprites-sprite(phone);} */
+
+/*   .logo_asr			{@include sprites-sprite(logo_asr);}
+  .logo_bhm 		{@include sprites-sprite(logo_bhm);}
+  .logo_bridge 		{@include sprites-sprite(logo_bridge);}
+  .logo_conductive_thread {@include sprites-sprite(logo_conductive_thread);}
+  .logo_foodsters	{@include sprites-sprite(logo_foodsters);}
+  .logo_bjjstack {@include sprites-sprite(logo_bjjstack);}
+  .logo_icbc 		{@include sprites-sprite(logo_icbc);}
+  .logo_ribeiro		{@include sprites-sprite(logo_ribeiro);}
+  .logo_sockeye		{@include sprites-sprite(logo_sockeye);} */
+}

@@ -1,0 +1,39 @@
+.bigheadmode {
+	section {
+ 		&.papercraft {
+ 			background: image-url('img/bigheadmode/shattered.png') 0 0 repeat-x;
+
+ 			img {
+ 				@extend %img-responsive;
+ 			}
+
+ 			.animation {
+ 				width: 400px;
+ 				height: 475px;
+ 				background: image-url('img/bigheadmode/animation/animation0011.png') no-repeat;
+ 			}
+
+ 			.facegen {
+ 				display: table;
+ 				height: 460px;
+
+ 				p {
+ 					display: table-cell;
+					vertical-align: middle;
+ 				}
+
+ 				img {
+ 					margin-top: 65px;
+ 				}
+ 			}
+		}	
+
+		&.pepakura {
+			margin-top: 45px;
+
+ 			img {
+ 				@extend %img-responsive;
+ 			}
+		}
+	}
+}

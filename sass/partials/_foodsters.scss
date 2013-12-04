@@ -1,0 +1,175 @@
+.foodsters {
+	section {
+ 		&.research {
+ 			border-top: 1px solid #DDD;
+ 			background-color: rgba(0, 0, 0, 0.03);
+
+			img {
+				@extend %img-responsive;
+			}
+		}	
+
+		&.visual-design {
+			border-top: 1px solid #DDD;
+			@include background-image(linear-gradient(45deg, #EEE 0%, #FFF 100%));
+
+			img {
+				margin: 30px 0;
+				@extend %img-responsive;
+			}
+		}
+
+		&.ux {
+			border-top: 1px solid #DDD;
+		}
+
+		&.showcase {
+			padding: 0;
+			background: url(../img/foodsters/showcase_bg.jpg) no-repeat 50% 25%;
+			@extend %overlay;
+
+			img {
+				position: relative;
+				z-index: 9999;
+				@extend %img-responsive;
+			}
+		}
+
+		&.development {
+			.subheading {
+				margin-top: 15px;
+			}
+		}
+
+		&.outcomes {
+			position: relative;
+			min-height: 600px;
+
+			.subheading {
+				margin-bottom: 20px;
+				text-align: left;
+			}	
+
+			svg {
+				position: absolute;
+				left: 50%;
+				margin-left: -800px;
+				top: -200px;
+				z-index: 0;
+
+				path {
+					stroke-dasharray: 2020;
+					stroke-dashoffset: 2020;
+					@include single-transition(stroke-dashoffset, 2s, ease-in-out, 0.5s);
+				}
+
+				circle {
+					@include opacity(1);
+					@include transform(scale(0, 0));
+					@include apply-origin(50%, 50%);
+
+					@for $circle from 0 through 12 {
+						&:nth-child(#{$circle}) {
+							//@include single-transition(opacity, .5s, ease-in-out, #{$circle * 0.1s});
+							@include single-transition(transform, .3s, ease-in-out, #{$circle * 0.05s});
+						}
+					}
+				}
+			}
+
+			&.visible {
+				path {
+					stroke-dashoffset: 0;
+				}
+
+				circle {
+					//@include opacity(1);
+					@include transform(scale(1, 1));
+				}
+			}
+
+			.testimonials, .last-words {
+				margin-top: 50px;
+
+				blockquote {
+					display: none;
+				}
+			}
+		}
+
+		&.more-work {
+			border-top: 1px solid #DDD;
+			background-color: rgba(0,0,0,0.03);
+		}
+	}
+
+	.knoll {
+		position: relative;
+		display: block;
+		width: 940px; 
+		height: 510px;
+		margin: 30px auto;
+
+		span {		
+			position: absolute;
+			background-image: url(../img/foodsters/knolling.png);
+			background-repeat: no-repeat;
+		}
+
+		img {
+			display: none !important;
+		}
+
+		.bag {		
+			@include knoll(363px, 326px, 0px, 0px);
+		}
+
+		.pad {
+			@include knoll(222px, 188px, 373px, 44px);
+		}
+
+		.card-1 {
+			@include knoll(82px, 49px, 603px, 62px);
+		}
+
+		.card-2 {
+			@include knoll(82px, 51px, 603px, 110px);
+		}
+
+		.card-3 {
+			@include knoll(82px, 50px, 603px, 160px);
+		}
+
+		.envelope {
+			@include knoll(246px, 179px, 691px, 44px);
+		}
+
+		.stamp {
+			@include knoll(97px, 108px, 373px, 234px);
+		}
+
+		.ipad {
+			@include knoll(207px, 180px, 485px, 234px);
+		}
+
+		.receipt {
+			@include knoll(170px, 216px, 691px, 234px);
+		}
+
+		.glasses {
+			@include knoll(144px, 58px, 513px, 425px);
+		}
+
+		.iphone {
+			@include knoll(69px, 137px, 407px, 351px);
+		}
+
+		.sketchbook {
+			@include knoll(186px, 137px, 213px, 350px);
+		}
+
+		.watch {
+			@include knoll(36px, 172px, 167px, 337px);
+		}
+	}
+}

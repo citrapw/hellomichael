@@ -1,0 +1,35 @@
+/**************************
+Fonts
+***************************/
+@mixin tisa {
+	font-family: $tisa;
+}
+
+@mixin din {
+	font-family: $din;
+	text-transform: uppercase;
+}
+
+.wf-loading {
+ 	a {
+		h1, h2, h3, h4, h5, h6 {
+			visibility: hidden;
+		}
+	}
+	
+	h1, h2, h3, h4, h5, h6, p, a {
+		visibility: hidden;
+	}
+}
+
+.wf-active {
+	a {
+		h1, h2, h3, h4, h5, h6 {
+			visibility: visible;
+		}
+	}
+	
+	h1, h2, h3, h4, h5, h6, p, a {
+		visibility: visible;
+	}
+}

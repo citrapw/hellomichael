@@ -1,0 +1,425 @@
+.casestudy {
+	section {
+		padding-bottom: 50px;
+
+		.subheading {
+			margin: 80px 0 50px;
+			text-align: center;
+		}
+
+		&.brief {
+			.heading {
+				margin: 85px 0 65px;
+			}
+
+			.logo {
+				text-align: center;
+
+				> div {
+					position: relative;
+					width: 280px;
+					margin: 15px auto 0;
+
+					.ribbon {
+						position: absolute;
+						top: 0;
+						display: block;
+						width: #{(280/2)}px;
+						height: 195px;
+						background: url(../img/foodsters/logo-ribbon.png) no-repeat;
+						z-index: 0;						
+
+						&.left {
+							left: 60px;
+							@include transform(rotate(45deg));
+							@include single-transition(all, 1s, false);
+						}
+
+						&.right {
+							background: url(../img/foodsters/logo-ribbon.png) no-repeat right;
+							right: 60px;
+							@include transform(rotate(-45deg));
+							@include single-transition(all, 1s, false, 0.2s);
+						}
+
+						&.visible {
+							@include transform(rotate(0deg));
+
+							&.left {
+								left: 0;
+							}
+
+							&.right {
+								background: url(../img/foodsters/logo-ribbon.png) no-repeat right;
+								right: 0;
+
+							}
+						}
+					}
+
+					img {
+						position: relative;
+						z-index: 1;
+						@extend %img-responsive;
+					}
+				}
+
+				a {			
+					display: inline-block;
+					margin-top: 15px;
+
+					.arrow {
+						@include single-transition(transform, 0.3s, ease-in-out);
+					}
+
+					h5 {
+						margin-left: 12px;
+						color: $red;
+						display: inline-block;
+					}
+
+					&:hover {
+						.arrow {
+							@include transform(translate(2px, -2px));
+						}
+					}
+				}
+			}
+		}
+	}
+
+	figure {
+		//@include serif;
+		font-size: 12px;
+		color: $lightgrey;
+		text-align: center;
+
+		sup {
+			vertical-align: super;
+			font-size: 9px;
+		}
+	}
+
+	.gallery {
+		display: block;
+		width: auto;
+		height: auto;
+		text-align: center;
+		cursor: default;
+		overflow: hidden;
+		visibility: hidden;
+
+		li {
+			@include single-transition(opacity, 1s);
+			@include opacity(0.5);
+
+			display: inline-block;
+			text-align: center;
+			margin: 0 30px;
+			cursor: pointer;
+
+			img {
+				@extend %img-responsive;
+			}
+
+			&.current {				
+				@include opacity(1);
+			}
+
+			&:first-child {
+				display: inline-block;	
+			}
+		}
+	}
+
+	.gallery-nav {
+		margin: 10px 0 5px;
+
+		li {
+			display: inline-block;
+
+			span {
+				margin: 0 4px 0 8px;
+			}
+
+			a {	
+				@include single-transition(font, 0.3s, ease-in-out);
+				@include din;
+				font-size: 16px;
+				color: $black;
+				text-transform: uppercase;
+			}
+
+			&.current {
+				a {
+					color: $red;
+				}
+			}
+		}
+	}
+
+	.gallery-description {
+		min-height: 120px;
+
+		li {
+			display: none;
+			&.current {
+				display: block;
+			}
+		}
+	}
+
+	.timeline {
+		position: relative;
+		padding-top: 75px;
+
+		h4 {
+			margin-bottom: 25px;
+			text-align: center;
+		}
+
+		.spine {
+			@extend %after;
+			@extend %before;
+			@include sprite-icon($sprites, git, center); 
+			top: 0;
+			height: 100%;
+			width: 30px;
+
+			&:before {
+				z-index: 1;
+			}
+
+			&:after {
+				top: 15px;
+				height: 100%;
+				width: 1px;
+				margin-left: 15px;
+				background-color: #CCC;
+				z-index: 0;
+			}
+		}
+
+ 		.heading {
+			h4 {
+				margin-bottom: 15px;
+				color: $red;
+				text-align: right;
+			}
+
+			&.omega {
+				margin-top: 75px;
+
+				h4 {
+					text-align: left;
+				}
+			}
+		}
+
+ 		.event {	
+			position: relative;			
+			@include opacity(0);
+			@include single-transition(all, 1s);
+
+ 			> div {
+ 				&:first-child {
+	 				position: relative;
+	 				margin-bottom: 45px;
+					background-color: $white;
+					border: 1px solid #CCC;
+	 				z-index: 1;
+					@include border-radius(6px);
+				}
+ 			}	
+			
+			img {
+				@include border-top-right-radius(5px);
+				@include border-top-left-radius(5px);
+				@extend %img-responsive;
+			}
+
+			.description {
+				font-size: 12px;
+				line-height: 18px;
+				border-top: 1px solid #CCC;
+
+				h6 {
+					padding: 7px 10px 0;
+				}
+
+				p {
+					margin-bottom: 5px;
+					padding: 6px 10px 5px;
+					color: $grey;
+				}
+
+				span {
+					position: relative;
+					display: block;
+					padding: 7px 10px;
+					border-top: 1px solid #CCC;
+					background: #EEE;
+
+					@include border-bottom-right-radius(5px);
+					@include border-bottom-left-radius(5px);
+					@include sprite-icon($sprites, tools); 
+
+					margin-left: 0;
+					padding-left: 30px;
+
+					&:before {
+						top: 9px;
+						left: 9px; 
+					}
+				}
+			}
+
+			.dot {
+				$circle_radius: 7px;
+
+				@extend %before;	
+				@extend %after;	
+				@include single-transition(all, 1s);
+
+				position: absolute;
+				top: 15px;
+				width: $circle_radius;
+				height: $circle_radius;
+
+				&:before { 
+					top: -15px;
+					content: "..........................";
+					font-family: Arial, sans-serif;
+					font-size: 10px;
+					color: #AAA;
+					z-index: 0;
+					cursor: default;
+				}
+
+				&:after {
+					@include border-radius($circle_radius/2);
+					display: block;
+					width: 100%;
+					height: 100%;
+					background: #999;
+					z-index: 0;
+				}
+			}
+
+			&.alpha {
+				left: -15px;
+
+				.dot {
+					right: 0;	
+
+					&:before {
+						left: -74px;
+					}
+				}
+
+				&.visible {
+					left: 0;
+
+					@include opacity(1);
+
+					.dot {
+						right: -74px;
+					}
+				}
+			}
+
+			&.omega {
+				left: 15px;
+
+				.dot {
+					left: 120px;
+
+					&:before {
+						right: -100px;
+					}
+				}
+
+				&.visible {
+					left: 0;
+					@include opacity(1);
+
+					.dot {
+						left: -73px;
+					}
+				}
+			}
+		}
+
+		.offset-by-two {
+			padding-left: 0;
+		}
+
+		.offset-by-eleven {
+			padding-left: 0;
+			margin-left: 540px;
+		}
+	}
+
+	.tags {
+		margin-left: 10px;
+
+		li {
+			$tag_height: 30px;
+			$tag_color1: #FFF;
+			$tag_color2: #F0F0F0;
+			$tag_border: lighten(#CCC, 3);
+
+
+			@include background-image(linear-gradient($tag_color1, $tag_color2));
+			@include border-top-right-radius(3px);
+			@include border-bottom-right-radius(3px);
+			@include box-shadow(1px 1px 3px 0 rgba(0, 0, 0, 0.1), inset 1px -2px 1px -1px #EEE);
+
+			position: relative;
+			display: inline-block;				
+			height: $tag_height;
+			margin-right: 25px;
+			border: 1px solid $tag_border;
+			border-left: none;
+
+			@extend %before;
+			@extend %after;
+			
+			&:before {
+				top: 50%; 
+				left: -#{round($tag_height/sqrt(3)/2)};
+				z-index: 0;
+				width: #{round($tag_height/sqrt(3))};
+				height: #{round($tag_height/sqrt(3))};
+				margin-top: -#{round($tag_height/sqrt(3)/2)};
+				border-right: solid 1px #{darken($tag_border, 15)};
+				border-bottom: solid 1px $tag_border;
+				@include background-image(linear-gradient(45deg, $tag_color1, $tag_color2));
+				@include transform(rotate(134deg) skewX(-10deg) skewY(-10deg));
+			}
+
+			&:after {
+				$circle_radius: 4px;
+				content: "";
+				top: 50%;
+				left: 3px;
+				margin-top: -3px;
+				z-index: 1;
+				width: $circle_radius;
+				height: $circle_radius;
+				background: #FFF;
+				border: 1px solid #CCC;
+				@include border-radius($circle_radius/2);
+			}
+
+			span {			
+				position: relative;
+				top: 3px;
+				padding: 15px;
+				font-size: 12px;		
+				color: $grey;
+				cursor: default;
+			}
+		}
+	}
+}

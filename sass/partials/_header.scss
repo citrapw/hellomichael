@@ -1,0 +1,70 @@
+header {
+	background-color: $white;
+	font-size: 10px;
+	line-height: 16px; 
+	text-align: center;
+	border-right: 1px solid lighten(#DDD, 5);
+	overflow: visible;
+
+	nav {
+		position: relative;
+		top: 50%;
+		margin-top: -179px - 63px;
+		
+		li {
+			margin-bottom: 65px;
+
+			> a {
+				display: block;	
+
+				&:hover {
+					color: $red;
+
+					h3, span {
+						color: $red;
+					}
+				}
+
+				h3, span {
+					color: $black;
+					@include single-transition(color, 0.3s);
+				}
+			}
+
+			&.active {
+				> a {
+					color: $red;
+
+					h3, span {
+						color: $red;
+					}
+
+					svg {
+						fill: $red;
+
+						line {
+							stroke: $red;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.navbar {
+		display: none;
+	}
+		
+ 	.copyright {
+ 		position: absolute;
+		padding: 20px;
+		left: 0;
+		bottom: 0;
+		color: $lightgrey;
+
+		a {
+			@include din;
+			font-size: 12px;
+		}
+	} 
+}

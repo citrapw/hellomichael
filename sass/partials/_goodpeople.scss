@@ -1,0 +1,26 @@
+.goodpeople {
+	.content {
+		padding: 50px 0;
+
+		ul {		
+			@include single-transition(top, .5s, ease-in-out);
+
+			position: relative;
+			top: -30px;
+			font-size: 12px;
+			text-align: center;
+
+			a {
+				&:hover {
+					color: $red;
+					padding-bottom: 1px;
+					border-bottom: 1px solid lighten($red, 15);
+				}
+			}
+
+			&.loaded {
+				top: 0;
+			}
+		}
+	}
+}

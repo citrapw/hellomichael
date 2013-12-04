@@ -1,0 +1,36 @@
+/**************************
+Layout
+***************************/
+$sidebar_width: 200px;
+$michael_height: 350px;
+$michael_width: 1300px;
+
+/**************************
+Colors
+***************************/
+$black: #000;
+$white: #FFF;
+$grey: #666;
+$lightgrey: #999;
+$darkgrey: #333;
+$blue: #39F;
+$red: #C33;
+
+
+/**************************
+Fonts
+***************************/
+$tisa: "ff-tisa-web-pro", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$din: "din-condensed-web", "Arial Narrow", Arial, sans-serif;
+
+/**************************
+Responsive Breaks
+***************************/
+$desktop: "only screen and (min-width: 1200px)";
+$laptop: "only screen and (min-width: 959px) and (max-width: 1199px)";
+
+$tablet: "only screen and (min-width: 768px) and (max-width: 959px)";
+
+$mobile: "only screen and (max-width: 767px)";
+$mobile_landsdcape: "only screen and (min-width: 480px) and (max-width: 767px)";
+$mobile_portrait: "only screen and (max-width : 320px)";

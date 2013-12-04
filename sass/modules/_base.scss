@@ -1,0 +1,66 @@
+/**************************
+Imports
+***************************/
+@import "compass/utilities/general/clearfix";
+@import "compass/utilities/general/float";
+@import "compass/css3";
+/* @import "compass/css3/box-shadow";
+@import "compass/css3/transition";
+@import "compass/css3/border-radius";
+@import "compass/css3/images";
+@import "compass/css3/transform";
+ */
+@import "_fonts";
+@import "_mixins";
+@import "_sprites";
+@import "_classes";
+
+/**************************
+Resets
+***************************/
+a {
+	color: $red;
+	text-decoration: none;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $red;
+	}
+}
+
+/**************************
+Global Layouts
+***************************/
+html {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: darken(#FFF, 0);
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: -201px;
+	width: $sidebar_width;
+	height: 100%;
+	overflow: hidden;
+	z-index: 10000;
+	@include float(left);
+	@include single-transition(left, .3s);
+}
+
+#main {
+	overflow: hidden;
+	min-height: 100%;
+	width: calc(100% - #{$sidebar_width});
+	margin-left: #{$sidebar_width};
+	@include float(left);
+}
+
+.column.omega, .columns.omega {
+	float: right;
+}

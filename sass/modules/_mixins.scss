@@ -1,0 +1,127 @@
+/**************************
+Sprites Helpers
+***************************/
+%hide-text {   
+	display: block;
+	border: 0;
+	text-indent: -999em;
+	overflow: hidden;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr; 
+}
+
+@mixin sprite-background ($sprite, $img-name, $offset-x: 0, $offset-y: 0, $display: block, $hidetext: false) {
+	@if ($hidetext == true) {
+		@extend %hide-text;
+	}
+	
+    background: sprite($sprite, $img-name, $offset-x, $offset-y) no-repeat;
+    display: $display;
+    width: image-width(sprite-file($sprite, $img-name));
+    height: image-height(sprite-file($sprite, $img-name));
+}
+
+@mixin sprite-icon ($sprite, $img-name, $direction:"left", $offset-x: 0, $offset-y: 0) {   
+	$icon_width: image-width(sprite-file($sprite, $img-name));
+	$icon_height: image-height(sprite-file($sprite, $img-name));
+	@extend %before;
+
+	@if $direction == "left" {
+ 		margin-left: 4px + $icon_width;
+	} 
+
+	@elseif $direction == "right" {
+		margin-right: 4px + $icon_width;
+	}
+
+	@elseif $direction == "center" {
+		display: block;
+		position: absolute;
+		left: 50%;
+		margin-left: -$icon_width/2;
+	}
+
+ 	&:before {
+ 		background: sprite($sprite, $img-name, $offset-x, $offset-y) no-repeat; 
+ 		width: $icon_width;
+ 		height: $icon_height;
+ 		top: 1px;
+
+		@if $direction == "left" {
+			left: -(4px + $icon_width);
+		} 
+
+		@elseif $direction == "right" {
+			left: auto;
+			right: -(4px + $icon_width);
+		}
+	} 
+}
+
+@mixin sprite-logo ($sprite, $img-name) {   
+	$icon_width: image-width(sprite-file($sprite, $img-name));
+	$icon_height: image-height(sprite-file($sprite, $img-name));
+
+	a {
+		@extend %before; 
+		@extend %after; 
+
+		&:before {
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 9997;
+		}
+	}
+
+	&.one-third {
+		a {
+		 	&:after {
+		 		background: sprite($sprite, $img-name) no-repeat; 
+		 		width: $icon_width;
+		 		height: $icon_height;
+				top: 50%;
+				left: 50%;
+				margin-left: -$icon_width/2;
+				margin-top: -$icon_height/2; 
+				z-index: 9998; 
+			}  
+		} 
+	}
+ 
+	&.two-thirds {
+		a {
+		 	&:after {
+		 		background: sprite($sprite, $img-name) no-repeat; 
+		 		width: $icon_width;
+		 		height: $icon_height;
+				top: 50%;
+				left: 5%;
+				margin-top: -$icon_height/2; 
+				z-index: 9998;
+			}  
+		} 
+	}
+
+	@media #{$mobile} {
+		a {
+		 	&:after {
+				left: 50% !important; 
+				margin-left: -$icon_width/2; 
+				margin-top: -$icon_height/2; 
+			}  
+		} 
+	}
+}
+
+@mixin knoll ($width, $height, $x_pos, $y_pos) {
+	display: block;
+	width: $width;
+	height:	$height;
+
+	background-position: -#{$x_pos} -#{$y_pos}; 
+	top: $y_pos;
+	left: $x_pos;
+}

@@ -1,0 +1,418 @@
+/**************************
+Global Placeholders
+***************************/
+%before {
+	position: relative;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+%after {
+	position: relative;
+
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+%overlay {			
+	@extend %after;
+
+	&:after {
+		background: image-url('img/grid.png');
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 999;
+	}
+}
+
+%img-responsive {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.no-transition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+.preload {
+	display: none !important; 
+}
+
+
+.mobile {
+	.content {
+		background: none;
+	}
+}
+
+.content {
+	position: relative;
+	z-index: 15;
+	height: 100%;
+	background: #{darken(#FFF, 2)} url(../img/noise.png);
+	border-top: 1px solid lighten(#DDD, 5);
+	@include single-box-shadow(rgba(0, 0, 0, 0.1), 0, 50px, 150px, 0);
+
+	p {
+		a {
+			&:hover {
+				color: $red;
+				padding-bottom: 1px;
+				border-bottom: 1px solid lighten($red, 15);
+			}
+		}
+	}
+}
+
+button.flat {
+	@include border-radius(0);
+	@include din;
+	@include single-transition(background, 0.5s);
+	
+	padding: 10px 20px;
+	background: #000;
+	border: none;
+	color: $white;
+	font-size: 20px;
+	font-weight: normal;
+	text-shadow: none;
+	outline: none;
+
+	&:hover, &:active, &:focus {
+		background: $red;
+	}
+
+	&:visited {
+		background: #000;
+	}
+}
+
+.feature {
+	position: relative;
+	height: 350px;
+	z-index: 1;
+	@extend %overlay;
+
+	img {
+		position: fixed;
+		left: 50%;
+		margin-left: #{-((1600)/2 - 150)}px; /*half the width*/
+		top: 0;
+		width: auto;
+		height: 350px;
+	}
+}
+
+.heading {
+	margin: 75px 0;
+	text-align: center;
+
+	span { // subtitle
+		&:first-child {
+			margin-left: -3px;
+			margin-bottom: 5px;
+			//text-shadow: 2px 2px 0 lighten($lightgrey, 5);
+		}
+	}
+
+	@extend %after;
+
+	&:after { // diagonal line strike through
+		$lineWidth: 300px;
+		height: 1px;
+		width: $lineWidth;
+		top: 40px;
+		left: 50%;
+		margin-left: -$lineWidth/2;
+		background-color: lighten($lightgrey, 20);
+		@include transform(rotate(30deg));
+		@include transform-origin(center, center);
+		z-index: -1;
+	}
+}
+
+.progress-bar {
+	position: absolute;
+	display: block;
+	height: 0%;
+	width: 1px;
+	top: 0;
+	left: 200px;
+	z-index: 9999;
+	background-color: $red;
+
+	@include single-transition(opacity, 0.5s, ease-in-out);
+
+	&.loaded {
+		opacity: 0;
+	}
+}
+
+.cover {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #FFF;
+	z-index: 9999;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	display: none;
+
+	.video-wrapper {
+		$vimeo_height: 750px;
+		$vimeo_width: 422px;
+
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-left: #{(-$vimeo_height + 200px)/2};
+		margin-top: #{-($vimeo_width/2) - 45px};
+		display: inline-block;
+
+		.iframe {
+			position: relative;
+			z-index: 2; 
+		}
+
+		button {
+			position: absolute;
+			top: #{$vimeo_width - 42px};
+			right: -2px;
+			z-index: 1;
+			opacity: 0;
+
+			@include single-transition(all, 0.5s, ease-in-out, 1.5s);
+
+			&.loaded {
+				@include single-transition(all, 0.5s, ease-in-out);
+				opacity: 1;
+				top: $vimeo_width - 2;
+			}
+		}
+	}
+}
+
+.mobile {
+	.cover {
+		display: none;
+	}
+
+	.feature {
+		img {
+			position: relative;
+		}
+	}
+}
+
+.projects {
+	.project {
+		margin-bottom: 20px;
+
+		a, img {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+
+		a {
+			overflow: hidden;
+
+			.info, .background {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			.description {
+				@include single-transition(opacity, 0.5s, ease-in-out);
+				@include opacity(0);
+				position: relative;					
+				padding: 45px 130px 0;
+				font-size: 12px;
+				color: $white;
+				text-align: center;
+				z-index: 10000;
+
+				h4 {
+					margin-bottom: 10px;
+					color: $white;
+
+/* 						@extend %before;
+					&:before {
+						width: 50px;
+						height: 2px;
+						top: 33px;
+						left: 50%;
+						margin-left: -25px;
+						background-color: $white;
+					} */
+				}
+			}
+
+			.background {			
+				@include single-transition(transform, 0.5s, ease-in-out, 0.30s);
+				@include transform(translate(834px));
+				@extend %before;
+				background-color: $red;
+				z-index: 9999;
+
+				&:before {
+					left: -214px;
+					width: 0px;
+					height: 0px;
+					border-style: solid;
+					border-width: 0 215px 215px 0;
+					border-color: transparent $red transparent transparent;
+				}
+			}
+
+			.snippet {
+				display: block;
+			}
+
+			.link {
+				@include din;
+				width: 80px;
+				display: block;
+				margin: 20px auto 0;
+				padding: 5px 10px;
+				border: 2px solid $white;
+				@include single-transition(background, 0.5s, ease-in-out, 0.15s);
+
+				&:hover {
+					background-color: darken($red, 8);
+				}
+			}
+
+			&:hover {
+				.description {
+					@include opacity(1);
+					@include single-transition(opacity, 0.5s, ease-in-out, 0.30s);
+				}
+
+				.background {
+					@include transform(translate(0));
+					@include single-transition(transform, 0.5s, ease-in-out, 0.15s);
+				}
+			}
+		}
+
+		&.one-third {
+			.background {	
+				@include transform(translate(515px));
+			}
+
+			.description {
+				padding: 45px 15px 0;
+			}
+		}
+
+		&.asr {
+			@include sprite-logo($sprites, logo_asr); 
+		}
+
+		&.bhm {
+			@include sprite-logo($sprites, logo_bhm);
+
+			&.one-third {
+				img {
+					width: auto;
+					position: relative;
+					left: 50%;
+					margin-left: -430px;
+				}
+			}
+		}
+
+		&.bridge {
+			@include sprite-logo($sprites, logo_bridge);
+		}
+
+		&.conductive_thread {
+			@include sprite-logo($sprites, logo_conductive_thread);
+		}
+
+		&.foodsters {
+			@include sprite-logo($sprites, logo_foodsters);
+
+			&.one-third {
+				img {
+					width: auto;
+					position: relative;
+					left: 50%;
+					margin-left: -430px;
+				}
+			}
+		}
+
+		&.bjjstack {
+			@include sprite-logo($sprites, logo_bjjstack);
+		}
+
+		&.icbc {
+			@include sprite-logo($sprites, logo_icbc);
+		}
+
+		&.ribeiro {
+			@include sprite-logo($sprites, logo_ribeiro);
+		}
+
+		&.sockeye {
+			@include sprite-logo($sprites, logo_sockeye);
+		}
+	}
+}
+
+.subtitle {
+	display: block;
+	font: 10px/18px $tisa;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-shadow: none;
+}
+
+.gif {
+	position: relative;
+	cursor: pointer;
+
+	.play {
+		@include sprite-icon($sprites, play, center); 
+		top: 50%;
+		margin-top: -50px;
+	}
+}
