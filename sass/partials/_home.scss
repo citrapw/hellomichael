@@ -223,6 +223,14 @@
 			margin-left: -396px;
 		}
 	}
+
+	.awwwards {
+		@include sprite-background($sprites, awwwards, 0, 0, false, true);
+		position: absolute;
+		top: 30px;
+		right: 0;
+		z-index: 9999;
+	}
 }
 
 @-webkit-keyframes moveHand {

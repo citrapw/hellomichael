@@ -45,50 +45,50 @@
 					<div class="container">
 						<div class="six columns alpha">
 							<div class="animation" 
-								data-0="background: !url(img/bigheadmode/animation/animation0001.png) no-repeat;"
+								data-0="background: !url(img/bigheadmode/animation/animation0001.gif) no-repeat;"
 
-								data-40p="background: !url(img/bigheadmode/animation/animation0002.png) no-repeat;"
-								data-43p="background: !url(img/bigheadmode/animation/animation0003.png) no-repeat;"
-								data-46p="background: !url(img/bigheadmode/animation/animation0004.png) no-repeat;"
-								data-49p="background: !url(img/bigheadmode/animation/animation0005.png) no-repeat;"
-								data-52p="background: !url(img/bigheadmode/animation/animation0006.png) no-repeat;"
-								data-55p="background: !url(img/bigheadmode/animation/animation0007.png) no-repeat;"
-								data-58p="background: !url(img/bigheadmode/animation/animation0008.png) no-repeat;"
-								data-61p="background: !url(img/bigheadmode/animation/animation0009.png) no-repeat;"
-								data-64p="background: !url(img/bigheadmode/animation/animation0010.png) no-repeat;"
-								data-67p="background: !url(img/bigheadmode/animation/animation0011.png) no-repeat;"
-								data-70p="background: !url(img/bigheadmode/animation/animation0012.png) no-repeat;"
-								data-73p="background: !url(img/bigheadmode/animation/animation0013.png) no-repeat;"
-								data-76p="background: !url(img/bigheadmode/animation/animation0014.png) no-repeat;"
-								data-79p="background: !url(img/bigheadmode/animation/animation0015.png) no-repeat;"
-								data-82p="background: !url(img/bigheadmode/animation/animation0016.png) no-repeat;"
-								data-85p="background: !url(img/bigheadmode/animation/animation0017.png) no-repeat;"
-								data-88p="background: !url(img/bigheadmode/animation/animation0018.png) no-repeat;"
-								data-91p="background: !url(img/bigheadmode/animation/animation0019.png) no-repeat;"
-								data-94p="background: !url(img/bigheadmode/animation/animation0020.png) no-repeat;"
+								data-40p="background: !url(img/bigheadmode/animation/animation0002.gif) no-repeat;"
+								data-43p="background: !url(img/bigheadmode/animation/animation0003.gif) no-repeat;"
+								data-46p="background: !url(img/bigheadmode/animation/animation0004.gif) no-repeat;"
+								data-49p="background: !url(img/bigheadmode/animation/animation0005.gif) no-repeat;"
+								data-52p="background: !url(img/bigheadmode/animation/animation0006.gif) no-repeat;"
+								data-55p="background: !url(img/bigheadmode/animation/animation0007.gif) no-repeat;"
+								data-58p="background: !url(img/bigheadmode/animation/animation0008.gif) no-repeat;"
+								data-61p="background: !url(img/bigheadmode/animation/animation0009.gif) no-repeat;"
+								data-64p="background: !url(img/bigheadmode/animation/animation0010.gif) no-repeat;"
+								data-67p="background: !url(img/bigheadmode/animation/animation0011.gif) no-repeat;"
+								data-70p="background: !url(img/bigheadmode/animation/animation0012.gif) no-repeat;"
+								data-73p="background: !url(img/bigheadmode/animation/animation0013.gif) no-repeat;"
+								data-76p="background: !url(img/bigheadmode/animation/animation0014.gif) no-repeat;"
+								data-79p="background: !url(img/bigheadmode/animation/animation0015.gif) no-repeat;"
+								data-82p="background: !url(img/bigheadmode/animation/animation0016.gif) no-repeat;"
+								data-85p="background: !url(img/bigheadmode/animation/animation0017.gif) no-repeat;"
+								data-88p="background: !url(img/bigheadmode/animation/animation0018.gif) no-repeat;"
+								data-91p="background: !url(img/bigheadmode/animation/animation0019.gif) no-repeat;"
+								data-94p="background: !url(img/bigheadmode/animation/animation0020.gif) no-repeat;"
 							>
 
 							<?php if(!$detect->isMobile()) :?>
-								<img class="preload" src="img/bigheadmode/animation/animation0001.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0002.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0003.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0004.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0005.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0006.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0007.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0008.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0009.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0010.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0011.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0012.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0013.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0014.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0015.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0016.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0017.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0018.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0019.png" alt="preload"/>
-								<img class="preload" src="img/bigheadmode/animation/animation0020.png" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0001.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0002.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0003.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0004.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0005.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0006.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0007.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0008.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0009.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0010.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0011.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0012.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0013.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0014.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0015.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0016.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0017.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0018.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0019.gif" alt="preload"/>
+								<img class="preload" src="img/bigheadmode/animation/animation0020.gif" alt="preload"/>
 							<?php endif;?>
 								
 							</div>

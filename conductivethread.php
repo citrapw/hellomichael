@@ -67,14 +67,12 @@
 										</ul>
 									</div>
 								</div>
-
-								
 							</div>
 						</div>
 					</div> 
 				</section>
 
-				<section>
+				<section class="mock">
 					<div class="container">
 						<img src="img/conductivethread/screenshot.jpg" alt="Conductive Thread"/>
 					</div>

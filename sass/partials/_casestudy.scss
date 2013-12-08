@@ -7,6 +7,14 @@
 			text-align: center;
 		}
 
+ 		&.mock {
+ 			img {
+ 				@extend %img-responsive;
+ 				border: 1px solid #CCC;
+ 			}
+		}	
+
+
 		&.brief {
 			.heading {
 				margin: 85px 0 65px;

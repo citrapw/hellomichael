@@ -73,7 +73,7 @@
 					</div> 
 				</section>
 
-				<section class="review">
+				<section class="mock">
 					<div class="container">
 						<div class="sixteen columns">
 							<div class="row">

@@ -5,10 +5,12 @@
 ?>
 
 <body class="home <?php if($detect->isMobile()) {echo 'mobile';} ?>">
-	<?php include_once('navigation.php');?>
+	<?php include_once('navigation.php');?>	
 
 	<div id="main">
 		<div class="wrapper" data-start="modules/home" data-title="<?php echo $meta_title;?>">
+			<a target="_blank" class="awwwards" href="http://www.awwwards.com/best-websites/hellomichael?subsection=all">awwwards</a>
+
 			<?php if(!$detect->isMobile()):?>
 		 		<div class="feature">
 				  	<video id="video" autoplay loop width="0">
@@ -43,7 +45,7 @@
 		 				<div class="eleven columns">
 							<p>Though I am a front-end developer by day, I have put pen to paper during a design process, been completely lost in a full stack environment, and have even worn the entrepreneurship hat.</p>
 
-							<p>I am an alumni of <a target="_blank" href="http://www.sfu.ca/siat.html">SFU's School of Interactive Arts + Technology</a> program, graduating with a Bachelors of Science with a major in Media Arts. Currently residing in Vancouver, B.C, Canada, I'm looking to grow professionally and personally anywhere outside of the country.</p>
+							<p>I am an alumnus of <a target="_blank" href="http://www.sfu.ca/siat.html">SFU's School of Interactive Arts + Technology</a> program, graduating with a Bachelors of Science with a major in Media Arts. Currently residing in Vancouver, B.C, Canada, I'm looking to grow professionally and personally anywhere outside of the country.</p>
 
 							<p>I want to be involved in projects that I can be proud of, join an amazing team, and advance my development career. Take some time to look at my work, credentials, and if you're interested in helping me make this happen, <a class="ajax scroll" target="_blank" href="?section=contact">let's get in touch</a>.</p>
 						</div>

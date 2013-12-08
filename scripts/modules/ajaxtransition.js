@@ -111,7 +111,7 @@ define(['navigation'], function (navigation) {
         };
 
         var loadAjax = function (data, title, url, push) {
-            if (History.pushState) {
+            if (history.pushState) { // browser conditional for push states
                 var duration = 750;
 
                 if(!$window.scrollTop()) {
