@@ -88,7 +88,7 @@
 		 							<h4>Professional Skillset</h4>
 		 							<ul>
 		 								<li>W3C Validated HTML5</li>
-		 								<li>CSS3 via SASS, LESS</li>
+		 								<li>CSS3 via SASS & Compass, LESS</li>
 		 								<li>jQuery, ajax, modernizr</li>
 		 								<li>Wordpress theme development</li>
 		 								<li>Website optimization + cross browser capabilities</li>
@@ -124,12 +124,19 @@
  						</div>
 
  						<div class="twelve column">
-							<ul>
-								<li>ICBC 180 Short Film Contest - 2nd Place - 2011</li>
+							<ul>								
+								<li style="margin-bottom: 15px;">Awwwards - Publication - 2013 The Best 365 Websites around the World - 2013</li>
+								<li>Awwwards - Site of the Day - 2013</li>
+								<li>CSS Based - Feature Spread - 2013</li>
+								<li>CSSMania - Feature Spread - 2013</li>
+								<li>OnePageMania - Feature Spread - 2013</li>
+								<li>Art-Spire - Feature Spread - 2013</li>
+								<li>The Webfonts Gallery - Feature Spread - 2013</li>
+								<li style="margin-bottom: 15px;">ICBC 180 Short Film Contest - 2nd Place - 2011</li>
 								<li>CIRA Showusyour.ca Video Contest - Grand Prize - 2010</li>
 								<li>SFU Co-op Video Contest - Grand Prize - 2009</li>
 								<li>TD Money Lounge Video Contest - Grand Prize - 2009</li>
-								<li>SFU Co-op Video Contest - Grand Prize - 2007</li>
+								<li style="margin-bottom: 15px;">SFU Co-op Video Contest - Grand Prize - 2007</li>
 								<li>VFS Entrance Scholarship - 2005</li>
 							</ul>
  						</div>

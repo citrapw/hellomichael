@@ -47,7 +47,7 @@
 
 							<p>I am an alumnus of <a target="_blank" href="http://www.sfu.ca/siat.html">SFU's School of Interactive Arts + Technology</a> program, graduating with a Bachelors of Science with a major in Media Arts. Currently residing in Vancouver, B.C, Canada, I'm looking to grow professionally and personally anywhere outside of the country.</p>
 
-							<p>I want to be involved in projects that I can be proud of, join an amazing team, and advance my development career. Take some time to look at my work, credentials, and if you're interested in helping me make this happen, <a class="ajax scroll" target="_blank" href="?section=contact">let's get in touch</a>.</p>
+							<p>I want to be involved in projects that I can be proud of, join an amazing team, and advance my design and development career. Take some time to look at my work, credentials, and if you're interested in helping me make this happen, <a class="ajax scroll" target="_blank" href="?section=contact">let's get in touch</a>.</p>
 						</div>
 
 						<div class="five columns resume">
